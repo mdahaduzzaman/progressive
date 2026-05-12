@@ -1,0 +1,25 @@
+{
+  "name": "progressive",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "icons": "node scripts/generate-icons.mjs",
+    "predev": "node scripts/generate-icons.mjs",
+    "prebuild": "node scripts/generate-icons.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^16.2.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
