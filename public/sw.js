@@ -8,14 +8,12 @@ const VERSION = "v1.0.0";
 const STATIC_CACHE = `static-${VERSION}`;
 const RUNTIME_CACHE = `runtime-${VERSION}`;
 
+// Tenant icons live at /tenants/<slug>/... and vary per origin, so we don't
+// precache them here — the stale-while-revalidate handler below will cache
+// them on first fetch within each tenant's own service worker scope.
 const APP_SHELL = [
   "/",
   "/manifest.webmanifest",
-  "/icons/icon.svg",
-  "/icons/icon-192.png",
-  "/icons/icon-512.png",
-  "/icons/maskable-512.png",
-  "/icons/apple-touch-icon.png",
   "/offline.html",
 ];
 
